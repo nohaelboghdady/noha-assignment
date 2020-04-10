@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      BMI Calulator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              Calculator
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Weight(Kg)</ion-label>
+              <ion-input type="number"[(ngModel)]="Weight"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Height(Cm)</ion-label>
+              <ion-input type="number"[(ngModel)]="Height"></ion-input>
+            </ion-item>
+            <div class="ion-text-center">
+              <ion-button (click)="Calculate()">
+                Calculate
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          
+         <ion-card-content *ngIf="BMI">
+           <ion-item>
+                <ion-label>
+                  {{bm1}}
+                </ion-label>
+              </ion-item>
+              <ion-item>
+              <ion-list>
+                <ion-label>
+                  {{bm2}} {{bm3}}
+                </ion-label>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-list>
+
+            
+                <ion-label>
+                  {{bm4}} {{BMI}}
+                </ion-label>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+          <ion-list>
+                <ion-label>
+                  {{bm5}}
+                </ion-label>
+              </ion-list>
+            </ion-item>
+            </ion-card-content>
+
+            
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
